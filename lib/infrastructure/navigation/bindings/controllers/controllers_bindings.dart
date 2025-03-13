@@ -1,1 +1,0 @@
-export 'package:learn_getx_architecture/infrastructure/navigation/bindings/controllers/product.controller.binding.dart'; 

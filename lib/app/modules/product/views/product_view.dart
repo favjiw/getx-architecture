@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import 'controllers/product.controller.dart';
+import '../controllers/product_controller.dart';
 
-class ProductScreen extends GetView<ProductController> {
-  const ProductScreen({super.key});
+class ProductView extends GetView<ProductController> {
+  const ProductView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ProductScreen'),
+        title: const Text('ProductView'),
         centerTitle: true,
       ),
       body: const Center(
         child: Text(
-          'ProductScreen is working',
+          'ProductView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),

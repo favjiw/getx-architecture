@@ -6,8 +6,7 @@ class User {
   User(
       this.id,
       this.name,
-      this.createdAt
-      );
+      this.createdAt);
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
@@ -15,5 +14,5 @@ class User {
       json['name'],
       json['created_at']
     );
-  }
+    }
 }

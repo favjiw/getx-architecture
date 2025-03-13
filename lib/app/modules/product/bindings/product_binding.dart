@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 
-import '../../../../presentation/product/controllers/product.controller.dart';
+import '../controllers/product_controller.dart';
 
-class ProductControllerBinding extends Bindings {
+class ProductBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<ProductController>(
