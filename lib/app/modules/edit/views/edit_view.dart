@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:learn_getx_architecture/app/modules/home/controllers/home_controller.dart';
 
-import '../controllers/add_controller.dart';
+import '../../home/controllers/home_controller.dart';
+import '../controllers/edit_controller.dart';
 
-class AddView extends GetView<AddController> {
-  const AddView({super.key});
+class EditView extends GetView<EditController> {
+  const EditView({super.key});
+
   @override
   Widget build(BuildContext context) {
+    final homeController = Get.find<HomeController>();
+    final data = homeController.findById(Get.arguments);
+    controller.name.text = data.name;
     return Scaffold(
-      appBar: AppBar(title: const Text('Add Product'), centerTitle: true),
+      appBar: AppBar(title: const Text('Edit Product'), centerTitle: true),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ListView(
@@ -24,14 +28,14 @@ class AddView extends GetView<AddController> {
                 border: OutlineInputBorder(),
               ),
               onEditingComplete:
-                  () => Get.find<HomeController>().add(controller.name.text),
+                  () => Get.find<HomeController>().edit(Get.arguments, controller.name.text),
             ),
             SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                Get.find<HomeController>().add(controller.name.text);
+                Get.find<HomeController>().edit(Get.arguments, controller.name.text);
               },
-              child: Text("Add Product"),
+              child: Text("Edit Product"),
             ),
           ],
         ),

@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/add/bindings/add_binding.dart';
 import '../modules/add/views/add_view.dart';
+import '../modules/edit/bindings/edit_binding.dart';
+import '../modules/edit/views/edit_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/product/bindings/product_binding.dart';
@@ -29,6 +31,11 @@ class AppPages {
       name: _Paths.ADD,
       page: () => const AddView(),
       binding: AddBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT,
+      page: () => const EditView(),
+      binding: EditBinding(),
     ),
   ];
 }

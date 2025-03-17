@@ -1,7 +1,7 @@
 class Product {
-  final String id;
-  late final String name;
-  final String createdAt;
+  String id;
+  String name;
+  String createdAt;
 
   Product(
       this.id,
