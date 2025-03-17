@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+
 import '../controllers/product_controller.dart';
 
 class ProductView extends GetView<ProductController> {
